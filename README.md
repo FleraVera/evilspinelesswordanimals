@@ -1,2 +1,3 @@
-this is a cool branch B) 
-its mine, aprils
+No human "entity" exists.
+Cube is opposite perfection.
+Singularity is death worship.

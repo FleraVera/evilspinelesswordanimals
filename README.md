@@ -1,3 +1,3 @@
-No human "entity" exists.
-Cube is opposite perfection.
-Singularity is death worship.
+I possess data, with proof,
+that will absolutely blow the
+lid off the present civilization.

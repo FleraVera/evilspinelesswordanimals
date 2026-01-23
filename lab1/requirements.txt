@@ -1,0 +1,75 @@
+HTML requirements:
+|    made for 980px width, should adjust to screen size
+|    3 pages with consistent menues and themeing 
+|        
+|        start page
+|            -title
+|            -logo and name (fictional corp)
+|    x        -several lvls of headers
+|            -several paragraphs
+|            -bold and italix
+|            -links
+|                -external links
+|                -internal links
+|    x        -mailadresses
+|            -list(s)
+|            -img(s)
+|            -clickable img(s)
+|    x        -table
+|            -list of "objects"
+|                ^img
+|                ^description
+|                ^borders
+|                ^a map (??????)
+|                ^interactive color display
+|                ^clickable
+|  
+|        "object page"
+|            -title
+|            -logo and name (fictional corp)
+|   x        -several lvls of headers
+|            -several paragraphs
+|            -bold and italix
+|            -links
+|    x            -external links
+|                -internal links
+|            -mailadresses
+|            -list(s)
+|            -img(s)
+|    x        -clickable img(s)
+|    x        -table
+|        
+|        contact information page
+|            -title
+|            -logo and name (fictional corp)
+|            -several lvls of headers
+|            -several paragraphs
+|            -bold and italix
+|            -links
+|    x            -external links
+|                -internal links
+|            -mailadresses
+|    x        -list(s)
+|            -img(s)
+|    x        -clickable img(s)
+|    x        -table
+|    
+|    menues are to made in one row (??)
+|    a map (again still "??????")
+
+CSS requirements:
+|   text color
+|   background color
+|   the box model (?)
+|       -margin
+|       -pading
+|       -border
+
+
+the work should be documented in a worddocument (instructions specify that)
+documentation should be able to awsoner the questions:
+    -what has inspired the website?
+    -what has inspired the code?
+a comprehensive refrence section is required (ex refrence img manipulation software).
+
+the code must be commented.

@@ -1,5 +1,6 @@
+
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -7,6 +8,10 @@ body {
     background-color: #ABCDEF;
     padding: 0px;
     margin: 0px;
+}
+
+a {
+    text-decoration: none;
 }
 
 nav {
@@ -22,41 +27,26 @@ nav a {
     color: #EA7E1F;
 }
 
-a {
-    text-decoration: none;
-}
-
 header img {
     vertical-align: middle;
+    width: 10%;
 }
 
-.listing img {
-    vertical-align: top;
-    width: 192px;
-}
 header span {
     font-size: xx-large;
 }
 
+
+
 .main-content {
     display: flex;
-    align-items: start;
-    text-align: center;
     flex-direction: row;
-    width: 90%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 3%;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin: 2% auto;
 }
-
-main {
-    min-width: 200px;
-    flex-direction: column;
-    background-size: contain;
-    margin: auto;
-    background-color: #28AFB0;
-
+.main-content ul {
+    list-style-type: none;
 }
 .listing {
     margin: 5px;
@@ -64,17 +54,19 @@ main {
     display: flex;
     flex-direction: row;
 }
-
-.main-content ul {
-    list-style-type: none;
+.listing img {
+    vertical-align: top;
+    width: 192px;
 }
-
 .listing h1 {
     padding-left: 5px;
 }
-aside{
+
+
+.ad {
     background-color:#1E8585;
 }
+
 /* we should probobly devide some stuff into specific css files 
 unless we can make every page use the same layout specifications.
 might be hard with the stuff abt main and so on, it feels like weve
@@ -86,9 +78,9 @@ what are we gonna do abt that?*/
 
 article{
     margin: 1% auto;
-    width: 50%; /*can adjust this as sees fit, very intuative and clean*/
-    min-width: 500px;
-    border:solid 3px #500050;
+    max-width: 70%; /*can adjust this as sees fit, very intuative and clean*/
+    min-width: 650px;
+    /*border:solid 3px #500050;*/
     background-color: #28AFB0;
     padding:0.5%;
 } /*due to the use of main in a parculiar way eralier the background is kinda fkd here
@@ -98,5 +90,5 @@ article>img{
     display: block;
     margin: 0 auto;/*inline elements cant have margins hence the above line*/
     width: 90%;
-    max-width: fit-content; /*not sure what fit content does exactly but i tried this and works*/
+    width: max-content; /*not sure what fit content does exactly but i tried this and works*/
 }

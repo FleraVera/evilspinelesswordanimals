@@ -3,54 +3,54 @@ HTML requirements:
 |    3 pages with consistent menues and themeing 
 |        
 |        start page
-|            -title
-|            -logo and name (fictional corp)
+|        O   -title
+|        O   -logo and name (fictional corp)
 |    x        -several lvls of headers
 |            -several paragraphs
 |            -bold and italix
-|            -links
+|        O   -links
 |                -external links
-|                -internal links
+|        O       -internal links
 |    x        -mailadresses
-|            -list(s)
-|            -img(s)
-|            -clickable img(s)
+|        O   -list(s)
+|        O   -img(s)
+|        O   -clickable img(s)
 |    x        -table
-|            -list of "objects"
-|                ^img
-|                ^description
-|                ^borders
+|        O   -list of "objects"
+|        O       ^img
+|        O       ^description
+|        O       ^borders
 |                ^a map (??????)
 |                ^interactive color display
-|                ^clickable
+|        O       ^clickable
 |  
 |        "object page"
-|            -title
-|            -logo and name (fictional corp)
+|        O   -title
+|        O   -logo and name (fictional corp)
 |   x        -several lvls of headers
-|            -several paragraphs
+|        O   -several paragraphs
 |            -bold and italix
-|            -links
+|        O   -links
 |    x            -external links
-|                -internal links
+|        O       -internal links
 |            -mailadresses
-|            -list(s)
-|            -img(s)
+|        O   -list(s)
+|        O   -img(s)
 |    x        -clickable img(s)
 |    x        -table
 |        
 |        contact information page
-|            -title
-|            -logo and name (fictional corp)
-|            -several lvls of headers
-|            -several paragraphs
+|        O   -title
+|        O   -logo and name (fictional corp)
+|        O   -several lvls of headers
+|        O   -several paragraphs
 |            -bold and italix
 |            -links
 |    x            -external links
 |                -internal links
 |            -mailadresses
 |    x        -list(s)
-|            -img(s)
+|        O   -img(s)
 |    x        -clickable img(s)
 |    x        -table
 |    
@@ -59,11 +59,11 @@ HTML requirements:
 
 CSS requirements:
 |   text color
-|   background color
-|   the box model (?)
-|       -margin
-|       -pading
-|       -border
+| O background color
+| O the box model (?)
+| O     -margin
+| O     -pading
+| O     -border
 
 
 the work should be documented in a worddocument (instructions specify that)

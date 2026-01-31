@@ -45,8 +45,9 @@ header span {
     justify-content:space-around;
     margin: 2% auto;
 }
-.main-content ul {
+.nobullets {
     list-style-type: none;
+    margin-left: -5%;
 }
 .listing {
     margin: 5px;
@@ -67,6 +68,8 @@ header span {
     background-color:#1E8585;
 }
 
+
+
 /* we should probobly devide some stuff into specific css files 
 unless we can make every page use the same layout specifications.
 might be hard with the stuff abt main and so on, it feels like weve
@@ -76,9 +79,9 @@ into its own shouldnt be hard and will take a few sec of ctrl c ctrl v
 so to stepping on anyones toes ill continue writing below. oh also the document???
 what are we gonna do abt that?*/
 
-article{
+article {
     margin: 1% auto;
-    max-width: 70%; /*can adjust this as sees fit, very intuative and clean*/
+    max-width: 100%; /*can adjust this as sees fit, very intuative and clean*/
     min-width: 650px;
     /*border:solid 3px #500050;*/
     background-color: #28AFB0;
@@ -86,9 +89,41 @@ article{
 } /*due to the use of main in a parculiar way eralier the background is kinda fkd here
 its a very neat and tidy way to del with the layout tho and i think we should use this
 more, also i came up with it myself (✿◡‿◡)*/
-article>img{
+article>img {
     display: block;
     margin: 0 auto;/*inline elements cant have margins hence the above line*/
     width: 90%;
     width: max-content; /*not sure what fit content does exactly but i tried this and works*/
+}
+
+
+
+/* following is css required only by the object page, i agree with april that we should probably
+ *split this up into several css files but for the moment its working. object page also requires
+ * some stuff from the rest of this stylesheet so take this into account if we split it.*/
+
+.inline {
+    display: inline;
+}
+
+.saleobject {   /* this solution for having 2 divs next to each other i got from clairesuzy on stackoverflow: https://stackoverflow.com/a/5803055 */
+    overflow: hidden; /* will contain if #first is longer than #second */
+    width: 100%;
+    border: 1px solid black;
+    margin-right: 50px;
+}
+
+#first {    /* still clairesuzy */
+width: 500px;
+float:left;
+padding: 5px;
+}
+#second { /* still clairesuzy */
+width: 250px;
+overflow: hidden;
+padding: 5px;
+}
+
+#second ul {
+    border: 1px solid black;
 }

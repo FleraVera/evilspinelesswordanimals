@@ -5,13 +5,13 @@ HTML requirements:
 |        start page
 |        O   -title
 |        O   -logo and name (fictional corp)
-|    x        -several lvls of headers
-|            -several paragraphs
-|            -bold and italix
+|    x   O   -several lvls of headers
+|        O   -several paragraphs
+|        O   -bold and italix
 |        O   -links
-|                -external links
+|        O       -external links
 |        O       -internal links
-|    x        -mailadresses
+|    x   O    -mailadresses
 |        O   -list(s)
 |        O   -img(s)
 |        O   -clickable img(s)
@@ -20,23 +20,23 @@ HTML requirements:
 |        O       ^img
 |        O       ^description
 |        O       ^borders
-|                ^a map (??????)
-|                ^interactive color display
+|        O       ^a map (??????)
+|        O       ^interactive color display
 |        O       ^clickable
 |  
 |        "object page"
 |        O   -title
 |        O   -logo and name (fictional corp)
-|   x        -several lvls of headers
+|   x    O   -several lvls of headers
 |        O   -several paragraphs
-|            -bold and italix
+|        O   -bold and italix
 |        O   -links
-|    x            -external links
+|    x   O        -external links
 |        O       -internal links
-|            -mailadresses
+|        O   -mailadresses
 |        O   -list(s)
 |        O   -img(s)
-|    x        -clickable img(s)
+|    x   O    -clickable img(s)
 |    x        -table
 |        
 |        contact information page
@@ -44,21 +44,21 @@ HTML requirements:
 |        O   -logo and name (fictional corp)
 |        O   -several lvls of headers
 |        O   -several paragraphs
-|            -bold and italix
-|            -links
-|    x            -external links
-|                -internal links
-|            -mailadresses
-|    x        -list(s)
+|        O   -bold and italix
+|        O   -links
+|    x   O        -external links
+|        O       -internal links
+|        O   -mailadresses
+|    x       -list(s)
 |        O   -img(s)
-|    x        -clickable img(s)
-|    x        -table
+|    x   O   -clickable img(s)
+|    x       -table
 |    
-|    menues are to made in one row (??)
-|    a map (again still "??????")
+|  O menues are to made in one row (??)
+|  O a map (again still "??????")
 
 CSS requirements:
-|   text color
+| O text color
 | O background color
 | O the box model (?)
 | O     -margin

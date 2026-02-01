@@ -213,3 +213,7 @@ li div img {
 .contact-image {
     width: 100%;
 }
+
+table, th, td{
+    border: solid green 1px;
+}

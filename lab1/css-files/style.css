@@ -5,7 +5,7 @@
 
 body {
     font-family: cursive;
-    background-color: #ABCDEF;
+    background-color: #dbf4ff;
     padding: 0px;
     margin: 0px;
     color: #100140;
@@ -22,12 +22,13 @@ nav{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #f7e08d;
+    background-color: #83dcfc;
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #a9c7db; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
 }
 
 nav a {
     font-size: x-large;
-    color: #EA7E1F;
+    color: #000000;
 }
 nav a:hover { /* read line 69*/
     background-color: #deaaff;
@@ -58,9 +59,11 @@ header span {
 }
 .listing {
     margin: 5px;
-    border: solid 3px black;
+    box-shadow: inset 0.2em 0.2em 0.2em 0 #62c0e3, inset -0.2em -0.2em 0.2em 0 #62c0e3; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
     display: flex;
     flex-direction: row;
+    border-radius: 10px;
+    background-color: #9ee5ff;
 }
 .listing img {
     vertical-align: top;
@@ -70,7 +73,7 @@ header span {
     padding-left: 5px;
 }
 .listing:hover { /* a "psudo class" found out abt it from https://www.w3schools.com/cssref/sel_hover.php*/
-border: #EA7E1F solid 3px;
+box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 rgba(255,255,255,0.5); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
 background-color: #deaaff;
 }
 
@@ -79,6 +82,9 @@ background-color: #deaaff;
 .ad {
     background-color:#1E8585;
     margin-bottom: 1cm;
+}
+
+img .ad {
 }
 aside {
     max-width: 20%;
@@ -100,8 +106,11 @@ article {
     max-width: 850px; /*can adjust this as sees fit, very intuative and clean*/
     min-width: 650px;
     /*border:solid 3px #500050;*/
-    background-color: #28AFB0;
-    padding:0.5%;
+    background-color: #83dcfc;
+    padding:2%;
+    border-radius: 15px;
+    /*box-shadow: 5px 5px 3px #a9c7db;*/
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #a9c7db; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
 } /*due to the use of main in a parculiar way eralier the background is kinda fkd here
 its a very neat and tidy way to del with the layout tho and i think we should use this
 more, also i came up with it myself (✿◡‿◡)*/
@@ -125,8 +134,12 @@ article>img {
 .saleobject {   /* this solution for having 2 divs next to each other i got from clairesuzy on stackoverflow: https://stackoverflow.com/a/5803055 */
     overflow: hidden; /* will contain if #first is longer than #second */
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid #48b3e0;
+    border-radius: 10px;
     margin-right: 50px;
+    box-shadow: inset 0.2em 0.2em 0.2em 0 #62c0e3, inset -0.2em -0.2em 0.2em 0 #62c0e3; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    padding: 2%;
+    background-color: #9ee5ff;
 }
 
 .first {    /* still clairesuzy */
@@ -141,7 +154,10 @@ padding: 5px;
 }
 
 .second ul {
-    border: 1px solid black;
+    box-shadow: inset 0.2em 0.2em 0.2em 0 #62c0e3, inset -0.2em -0.2em 0.2em 0 #62c0e3; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    border-radius: 5px;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 /***********/
@@ -152,6 +168,7 @@ aside nav{
     width: auto;
     position:fixed; /*credit to "cup_of" from here https://stackoverflow.com/questions/39420177/locking-a-div-to-the-top-of-the-screen*/
     margin-left: -5%;
+    border-radius: 15px;
 }
 section {
     padding:1%;
@@ -160,13 +177,30 @@ section {
 #listing5 {
     margin-bottom: 0px;
 }
+
+#listingnav {
+    padding-right:10px;
+}
+
 iframe {
     width:100%;
     border:0;
 }
 
-
-
 .secret {
     margin-top: 8cm;
+}
+
+
+/* New CSS as of 01/02/2026 -Vera */
+.logo {
+    width: 20%;
+}
+
+li img {
+    width: 100%;
+}
+
+li div img {
+    width: 20%;
 }

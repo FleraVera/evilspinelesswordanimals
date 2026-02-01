@@ -80,11 +80,16 @@ background-color: #deaaff;
 
 
 .ad {
-    background-color:#1E8585;
+    background-color: #83dcfc;
     margin-bottom: 1cm;
+    border-radius: 15px;
+    /*box-shadow: 5px 5px 3px #a9c7db;*/
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #a9c7db; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    padding:2%;
 }
 
-img .ad {
+.ad img {
+    width: 100%;
 }
 aside {
     max-width: 20%;

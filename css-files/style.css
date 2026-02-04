@@ -2,38 +2,67 @@
 * {
     box-sizing: border-box;
 }
-
+:root{
+    --primary-color:#dbf4ff;
+    --secondary-color:#83dcfc;
+    --tertuary-color:#28AFB0;
+    --highlight-color:#deaaff;
+    --text-color:#100140;
+}
 body {
     font-family: cursive;
-    background-color: #dbf4ff;
+    background-color: var(--primary-color);
     padding: 0px;
     margin: 0px;
-    color: #100140;
+    color: var(--text-color);
 }
 
 a {
     text-decoration: none;
-    color: #100140;
+    color: var(--text-color);
 }
 
 
-nav{
+
+/*plz ecuse the lack of style coherence, added a border thing to show where itd be but placceholder values*/
+/*the :not(#listingnav) is to make it do on everything except listingnav in obj page since that page uses ul too*/
+nav:not(#listingnav)>ul {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-evenly;
-    background-color: #83dcfc;
+    list-style-type: none;
+    background-color: var(--secondary-color);
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #a9c7db; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#listingnav{ /*listing nav iss likely something we will replace later on when we learn how to make the header sticky*/
+    background-color: var(--secondary-color);
     box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #a9c7db; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
 }
-
 nav a {
     font-size: x-large;
-    color: #000000;
+    color: var(--text-color);
 }
-nav a:hover { /* read line 69*/
-    background-color: #deaaff;
-    color:#28AFB0;
+nav li {
+    position:relative;
+    list-style-type: none;
 }
+nav li>*:hover { /* read line 69*/
+    background-color: var(--highlight-color);
+    color:var(--tertuary-color);
+}
+
+nav:not(#listingnav)>ul>*>ul { /*defaults invis items*/
+    background-color: var(--tertuary-color);
+    box-shadow: inset 0.2em 0.2em 0.2em 0 var(--secondary-color),inset -0.2em -0.2em 0.2em 0 var(--secondary-color);
+    position:absolute; /*this snaps the item out of the ul above it*/
+    display: none;
+    list-style-type: none;
+}
+nav:not(#listingnav)>ul>*:hover>* { /*makes hoverd item visable*/
+    display: block;
+}
+
 
 header img {
     vertical-align: middle;
@@ -74,7 +103,7 @@ header span {
 }
 .listing:hover { /* a "psudo class" found out abt it from https://www.w3schools.com/cssref/sel_hover.php*/
 box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 rgba(255,255,255,0.5); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
-background-color: #deaaff;
+background-color: var(--highlight-color);
 }
 
 

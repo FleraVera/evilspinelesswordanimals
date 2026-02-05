@@ -5,9 +5,11 @@
 :root{
     --primary-color:#dbf4ff;
     --secondary-color:#83dcfc;
-    --tertuary-color:#83dcfc;
+    --tertuary-color:#62c0e3;
+    --quartary-color:#9ee5ff;
     --highlight-color:#deaaff;
     --text-color:#100140;
+    --shadow-color:#0000001F;
     --shaded-color:#48b3e0;
 }
 body {
@@ -31,13 +33,13 @@ header {
 }
 /*plz ecuse the lack of style coherence, added a border thing to show where itd be but placceholder values*/
 /*the :not(#listingnav) is to make it do on everything except listingnav in obj page since that page uses ul too*/
-nav:not(#listingnav)>ul {
+nav>ul {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
     padding: 0px;
     background-color: var(--secondary-color);
-    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #0000001F; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 var(--shaded-color), 5px 5px 3px var(--shadow-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -47,7 +49,7 @@ nav:not(#listingnav)>ul {
     box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #a9c7db;
 }
 ////////THIS CODE IS DEPRICATED////////////// */
-nav a {
+nav a{
     font-size: x-large;
     color: var(--text-color);
 }
@@ -56,25 +58,25 @@ nav li {
     list-style-type: none;
     padding: 0px;
 }
-nav li>*>li:hover { /* read line 69*/
+nav>ul *:hover>* { /*makes hoverd item visable*/
+    display: block;
+}
+nav>ul *>li:hover { /* read line 121*/
     background-color: var(--highlight-color);
-    color:var(--tertuary-color);
+    color:var(--secondary-color);
 }
 
 /*nav:not(#listingnav)>ul>*>ul { /*defaults invis items*/ /*please u have got to start making classes. "nav:not(#listingnav)>ul>*>ul" statements dreamed up by the absolutely deranged*/
+/*no worries got u ;3*/
 
-nav:not(#listingnav)>ul>*:hover>* { /*makes hoverd item visable*/
-    display: block;
-}
-
-.navdropdown {
+.navdropdown, .navdropdown ul { /*second argument is for dropdowns in dropdowns, repeats infinitum*/
     width: 100%;
     text-align: center;
-    background-color: var(--tertuary-color);
-    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5),inset -0.2em -0.2em 0.2em 0 var(--shaded-color), 5px 5px 3px #0000001F;
+    background-color: var(--secondary-color);
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5),inset -0.2em -0.2em 0.2em 0 var(--shaded-color), 5px 5px 3px var(--shadow-color);
     border-radius: 10px;
     position:absolute; /*this snaps the item out of the ul above it*/
-    display: none;
+    display: none; /*defualts invis*/
     list-style-type: none;
     padding: 0px;
 }
@@ -104,11 +106,11 @@ header span {
 }
 .listing {
     margin: 5px;
-    box-shadow: inset 0.2em 0.2em 0.2em 0 #62c0e3, inset -0.2em -0.2em 0.2em 0 #62c0e3; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    box-shadow: inset 0.2em 0.2em 0.2em 0 var(--tertuary-color), inset -0.2em -0.2em 0.2em 0 var(--tertuary-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
     display: flex;
     flex-direction: row;
     border-radius: 10px;
-    background-color: #9ee5ff;
+    background-color: var(--quartary-color);
 }
 .listing img {
     vertical-align: top;
@@ -125,11 +127,11 @@ background-color: var(--highlight-color);
 
 
 .ad {
-    background-color: #83dcfc;
+    background-color: var(--secondary-color);
     margin-bottom: 1cm;
     border-radius: 15px;
     /*box-shadow: 5px 5px 3px #a9c7db;*/
-    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #0000001F; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 var(--shaded-color), 5px 5px 3px var(--shadow-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
     padding:2%;
 }
 
@@ -156,11 +158,11 @@ article {
     max-width: 850px; /*can adjust this as sees fit, very intuative and clean*/
     min-width: 650px;
     /*border:solid 3px #500050;*/
-    background-color: #83dcfc;
+    background-color: var(--secondary-color);
     padding:2%;
     border-radius: 15px;
     /*box-shadow: 5px 5px 3px #a9c7db;*/
-    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #0000001F; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 var(--shaded-color), 5px 5px 3px var(--shadow-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
 } /*due to the use of main in a parculiar way eralier the background is kinda fkd here
 its a very neat and tidy way to del with the layout tho and i think we should use this
 more, also i came up with it myself (✿◡‿◡)*/
@@ -176,20 +178,20 @@ article>img {
 /* following is css required only by the object page, i agree with april that we should probably
  *split this up into several css files but for the moment its working. object page also requires
  * some stuff from the rest of this stylesheet so take this into account if we split it.*/
-
+/*////DEPRICATED/////
 .inline {
     display: inline;
 }
-
+//////DEPRICATED////*/
 .saleobject {   /* this solution for having 2 divs next to each other i got from clairesuzy on stackoverflow: https://stackoverflow.com/a/5803055 */
     overflow: hidden; /* will contain if #first is longer than #second */
     width: 100%;
-    border: 1px solid #48b3e0;
+    border: 1px solid var(--shaded-color);
     border-radius: 10px;
     margin-right: 50px;
-    box-shadow: inset 0.2em 0.2em 0.2em 0 #62c0e3, inset -0.2em -0.2em 0.2em 0 #62c0e3; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    box-shadow: inset 0.2em 0.2em 0.2em 0 var(--tertuary-color), inset -0.2em -0.2em 0.2em 0 var(--tertuary-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
     padding: 2%;
-    background-color: #9ee5ff;
+    background-color: var(--quartary-color);
 }
 
 .first {    /* still clairesuzy */
@@ -204,7 +206,7 @@ padding: 5px;
 }
 
 .second ul {
-    box-shadow: inset 0.2em 0.2em 0.2em 0 #62c0e3, inset -0.2em -0.2em 0.2em 0 #62c0e3; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    box-shadow: inset 0.2em 0.2em 0.2em 0 var(--tertuary-color), inset -0.2em -0.2em 0.2em 0 var(--tertuary-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
     border-radius: 5px;
     padding-top: 3%;
     padding-bottom: 3%;
@@ -226,7 +228,7 @@ section {
     padding:1%;
     margin-bottom:  10cm ;
 }
-#listing5 {
+#listing5 { /*kinda messy tbh, its here to make the last item not have blank space underneath. but is not conducive to adaptive listing length, suggested solution introduce a negative padding on article or add a new element(and css) for vertical spacing specifically*/
     margin-bottom: 0px;
 }
 /*//////THIS CODE IS DEPRICATED//////////////
@@ -258,18 +260,18 @@ li img {
 li div img {
     width: 20%;
 }
-
+/*///DEPRICATED///
 .contact-image {
     width: 100%;
 }
-
+////DEPRICATED////*/
 table, th, td{
     border: solid green 1px;
 }
 
 .contact-form {
-    box-shadow: inset 0.15em 0.15em 0.15em 0 #62c0e3, inset -0.15em -0.15em 0.15em 0 #0000001F;
+    box-shadow: inset 0.15em 0.15em 0.15em 0 var(--tertuary-color), inset -0.15em -0.15em 0.15em 0 var(--shadow-color);
     border: solid black 0px;
     border-radius: 10px;
-    background-color: #83dcfc;
+    background-color: var(--secondary-color);
 }

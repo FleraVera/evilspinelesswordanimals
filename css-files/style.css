@@ -5,9 +5,10 @@
 :root{
     --primary-color:#dbf4ff;
     --secondary-color:#83dcfc;
-    --tertuary-color:#28AFB0;
+    --tertuary-color:#83dcfc;
     --highlight-color:#deaaff;
     --text-color:#100140;
+    --shaded-color:#48b3e0;
 }
 body {
     font-family: cursive;
@@ -34,8 +35,9 @@ nav:not(#listingnav)>ul {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+    padding: 0px;
     background-color: var(--secondary-color);
-    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #a9c7db; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #0000001F; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -52,23 +54,30 @@ nav a {
 nav li {
     position:relative;
     list-style-type: none;
+    padding: 0px;
 }
-nav li>*:hover { /* read line 69*/
+nav li>*>li:hover { /* read line 69*/
     background-color: var(--highlight-color);
     color:var(--tertuary-color);
 }
 
-nav:not(#listingnav)>ul>*>ul { /*defaults invis items*/
-    background-color: var(--tertuary-color);
-    box-shadow: inset 0.2em 0.2em 0.2em 0 var(--secondary-color),inset -0.2em -0.2em 0.2em 0 var(--secondary-color);
-    position:absolute; /*this snaps the item out of the ul above it*/
-    display: none;
-    list-style-type: none;
-}
+/*nav:not(#listingnav)>ul>*>ul { /*defaults invis items*/ /*please u have got to start making classes. "nav:not(#listingnav)>ul>*>ul" statements dreamed up by the absolutely deranged*/
+
 nav:not(#listingnav)>ul>*:hover>* { /*makes hoverd item visable*/
     display: block;
 }
 
+.navdropdown {
+    width: 100%;
+    text-align: center;
+    background-color: var(--tertuary-color);
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5),inset -0.2em -0.2em 0.2em 0 var(--shaded-color), 5px 5px 3px #0000001F;
+    border-radius: 10px;
+    position:absolute; /*this snaps the item out of the ul above it*/
+    display: none;
+    list-style-type: none;
+    padding: 0px;
+}
 /*//////THIS CODE IS DEPRICATED//////////////
 header img {
     vertical-align: middle;
@@ -120,7 +129,7 @@ background-color: var(--highlight-color);
     margin-bottom: 1cm;
     border-radius: 15px;
     /*box-shadow: 5px 5px 3px #a9c7db;*/
-    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #a9c7db; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #0000001F; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
     padding:2%;
 }
 
@@ -151,7 +160,7 @@ article {
     padding:2%;
     border-radius: 15px;
     /*box-shadow: 5px 5px 3px #a9c7db;*/
-    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #a9c7db; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #0000001F; /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
 } /*due to the use of main in a parculiar way eralier the background is kinda fkd here
 its a very neat and tidy way to del with the layout tho and i think we should use this
 more, also i came up with it myself (✿◡‿◡)*/
@@ -259,7 +268,7 @@ table, th, td{
 }
 
 .contact-form {
-    box-shadow: inset 0.15em 0.15em 0.15em 0 #62c0e3, inset -0.15em -0.15em 0.15em 0 #62c0e3;
+    box-shadow: inset 0.15em 0.15em 0.15em 0 #62c0e3, inset -0.15em -0.15em 0.15em 0 #0000001F;
     border: solid black 0px;
     border-radius: 10px;
     background-color: #83dcfc;

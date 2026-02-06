@@ -1,0 +1,277 @@
+
+* {
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#dbf4ff;
+    --secondary-color:#83dcfc;
+    --tertuary-color:#62c0e3;
+    --quartary-color:#9ee5ff;
+    --highlight-color:#deaaff;
+    --text-color:#100140;
+    --shadow-color:#0000001F;
+    --shaded-color:#48b3e0;
+}
+body {
+    font-family: cursive;
+    background-color: var(--primary-color);
+    padding: 0px;
+    margin: 0px;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+header {
+    position:sticky;
+    top: 0;
+    display: block;
+}
+/*plz ecuse the lack of style coherence, added a border thing to show where itd be but placceholder values*/
+/*the :not(#listingnav) is to make it do on everything except listingnav in obj page since that page uses ul too*/
+#menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0px;
+    background-color: var(--secondary-color);
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 var(--shaded-color), 5px 5px 3px var(--shadow-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/*//////THIS CODE IS DEPRICATED//////////////
+#listingnav{ /*listing nav iss likely something we will replace later on when we learn how to make the header sticky
+    background-color: var(--secondary-color);
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 #48b3e0, 5px 5px 3px #a9c7db;
+}
+////////THIS CODE IS DEPRICATED////////////// */
+nav a{
+    font-size: x-large;
+    color: var(--text-color);
+}
+nav li {
+    position:relative;
+    list-style-type: none;
+    padding: 0px;
+}
+#menu *:hover>* { /*makes hoverd item visable*/
+    display: block;
+}
+#menu *>li:hover { /* read line 121*/
+    background-color: var(--highlight-color);
+    color:var(--secondary-color);
+}
+
+/*nav:not(#listingnav)>ul>*>ul { /*defaults invis items*/ /*please u have got to start making classes. "nav:not(#listingnav)>ul>*>ul" statements dreamed up by the absolutely deranged*/
+/*no worries got u ;3*/
+
+.dropdown, .dropdown ul { /*second argument is for dropdowns in dropdowns, repeats infinitum*/
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary-color);
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5),inset -0.2em -0.2em 0.2em 0 var(--shaded-color), 5px 5px 3px var(--shadow-color);
+    border-radius: 10px;
+    position:absolute; /*this snaps the item out of the ul above it*/
+    display: none; /*defualts invis*/
+    list-style-type: none;
+    padding: 0px;
+}
+/*//////THIS CODE IS DEPRICATED//////////////
+header img {
+    vertical-align: middle;
+    width: 10%;
+}
+
+header span {
+    font-size: xx-large;
+}
+/   //////THIS CODE IS DEPRICATED//////////////*/
+
+
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin: 2% auto;
+}
+.nobullets {
+    list-style-type: none;
+    margin-left: -5%;
+}
+.listing {
+    margin: 5px;
+    box-shadow: inset 0.2em 0.2em 0.2em 0 var(--tertuary-color), inset -0.2em -0.2em 0.2em 0 var(--tertuary-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: var(--quartary-color);
+}
+.listing img {
+    vertical-align: top;
+    width: 192px;
+}
+.listing h1 {
+    padding-left: 5px;
+}
+.listing:hover { /* a "psudo class" found out abt it from https://www.w3schools.com/cssref/sel_hover.php*/
+box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 rgba(255,255,255,0.5); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+background-color: var(--highlight-color);
+}
+
+
+
+.ad {
+    background-color: var(--secondary-color);
+    margin-bottom: 1cm;
+    border-radius: 15px;
+    /*box-shadow: 5px 5px 3px #a9c7db;*/
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 var(--shaded-color), 5px 5px 3px var(--shadow-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    padding:2%;
+}
+
+.ad img {
+    width: 100%;
+}
+aside {
+    max-width: 20%;
+}
+
+
+/* we should probobly devide some stuff into specific css files 
+unless we can make every page use the same layout specifications.
+might be hard with the stuff abt main and so on, it feels like weve
+tailored the css above to work for the starting and not to work for
+a general page. tho i dont wanna stirr the pot so to say, moving it
+into its own shouldnt be hard and will take a few sec of ctrl c ctrl v
+so to stepping on anyones toes ill continue writing below. oh also the document???
+what are we gonna do abt that?*/
+
+article {
+    margin: 1% auto;
+    width:100%;
+    max-width: 850px; /*can adjust this as sees fit, very intuative and clean*/
+    min-width: 650px;
+    /*border:solid 3px #500050;*/
+    background-color: var(--secondary-color);
+    padding:2%;
+    border-radius: 15px;
+    /*box-shadow: 5px 5px 3px #a9c7db;*/
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 var(--shaded-color), 5px 5px 3px var(--shadow-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+} /*due to the use of main in a parculiar way eralier the background is kinda fkd here
+its a very neat and tidy way to del with the layout tho and i think we should use this
+more, also i came up with it myself (✿◡‿◡)*/
+article>img {
+    display: block;
+    margin: 0 auto;/*inline elements cant have margins hence the above line*/
+    width: 90%;
+    width: max-content; /*not sure what fit content does exactly but i tried this and works*/
+}
+
+
+
+/* following is css required only by the object page, i agree with april that we should probably
+ *split this up into several css files but for the moment its working. object page also requires
+ * some stuff from the rest of this stylesheet so take this into account if we split it.*/
+/*////DEPRICATED/////
+.inline {
+    display: inline;
+}
+//////DEPRICATED////*/
+.saleobject {   /* this solution for having 2 divs next to each other i got from clairesuzy on stackoverflow: https://stackoverflow.com/a/5803055 */
+    overflow: hidden; /* will contain if #first is longer than #second */
+    width: 100%;
+    border: 1px solid var(--shaded-color);
+    border-radius: 10px;
+    margin-right: 50px;
+    box-shadow: inset 0.2em 0.2em 0.2em 0 var(--tertuary-color), inset -0.2em -0.2em 0.2em 0 var(--tertuary-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    padding: 2%;
+    background-color: var(--quartary-color);
+}
+
+.first {    /* still clairesuzy */
+width: 500px;
+float:left;
+padding: 5px;
+}
+.second { /* still clairesuzy */
+width: 250px;
+overflow: hidden;
+padding: 5px;
+}
+
+.second ul {
+    box-shadow: inset 0.2em 0.2em 0.2em 0 var(--tertuary-color), inset -0.2em -0.2em 0.2em 0 var(--tertuary-color); /* CSS Double inset box shadow found on stackoverflow, posted by Joseph Marikle: https://stackoverflow.com/a/24745511 */
+    border-radius: 5px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+/***********/
+/*making an exception for navs inside of asides to function as side bars*/
+/*//////THIS CODE IS DEPRICATED//////////////
+aside nav{
+    padding: 0;
+    text-align: center;
+    width: auto;
+    position:fixed; /*credit to "cup_of" from here https://stackoverflow.com/questions/39420177/locking-a-div-to-the-top-of-the-screen/
+    margin-left: -5%;
+    border-radius: 15px;
+}
+//////THIS CODE IS DEPRICATED////////////// */
+section {
+    padding:1%;
+    margin-bottom:  10cm ;
+}
+#listing5 { /*kinda messy tbh, its here to make the last item not have blank space underneath. but is not conducive to adaptive listing length, suggested solution introduce a negative padding on article or add a new element(and css) for vertical spacing specifically*/
+    margin-bottom: 0px;
+}
+/*//////THIS CODE IS DEPRICATED//////////////
+#listingnav {
+    padding-right:10px;
+}
+//////THIS CODE IS DEPRICATED//////////////*/
+
+iframe {
+    width:100%;
+    border:0;
+}
+/*//////THIS CODE IS DEPRICATED//////////////
+.secret {
+    margin-top: 8cm;
+}
+//////THIS CODE IS DEPRICATED//////////////*/
+
+
+/* New CSS as of 01/02/2026 -Vera */
+.logo {
+    width: 20%;
+}
+
+li img {
+    width: 100%;
+}
+
+li div img {
+    width: 20%;
+}
+/*///DEPRICATED///
+.contact-image {
+    width: 100%;
+}
+////DEPRICATED////*/
+table, th, td{
+    border: solid green 1px;
+}
+
+.contact-form {
+    box-shadow: inset 0.15em 0.15em 0.15em 0 var(--tertuary-color), inset -0.15em -0.15em 0.15em 0 var(--shadow-color);
+    border: solid black 0px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+}

@@ -196,7 +196,7 @@ article>img {
 
 .first {    /* still clairesuzy */
 width: 500px;
-float:left;
+float:left;     /* float is banned apparently, dont use this on tenta //ver */
 padding: 5px;
 }
 .second { /* still clairesuzy */
